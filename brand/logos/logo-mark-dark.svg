@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Montserrat:wght@400;500&amp;display=swap');
+      .dark-ring { fill: none; stroke: #DCC8AC; stroke-width: 1.25; }
+      .dark-inner-ring { fill: none; stroke: #F5F0E8; stroke-width: 0.75; opacity: 0.35; stroke-dasharray: 2.5 3.5; }
+      .dark-stem { fill: #F5F0E8; }
+      .dark-accent { fill: #DCC8AC; }
+      .dark-serif { fill: #F5F0E8; }
+      .dark-sub { font-family: 'Montserrat', sans-serif; font-size: 6px; letter-spacing: 0.38em; fill: #DCC8AC; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Outer Architectural Medallion -->
+  <circle class="dark-ring" cx="100" cy="100" r="92" />
+  <circle class="dark-inner-ring" cx="100" cy="100" r="86" />
+
+  <!-- Four Cardinal Luxury Diamond Accents -->
+  <polygon class="dark-accent" points="100,4 102.5,8 100,12 97.5,8" />
+  <polygon class="dark-accent" points="100,188 102.5,192 100,196 97.5,192" />
+  <polygon class="dark-accent" points="4,100 8,97.5 12,100 8,102.5" />
+  <polygon class="dark-accent" points="188,100 192,97.5 196,100 192,102.5" />
+
+  <!-- Central HN Ligature Monogram -->
+  <g id="hn-ligature-dark" transform="translate(0, -2)">
+    <!-- Top Central Star / Couture Finial -->
+    <path class="dark-accent" d="M 100,38 L 102.2,44 L 108.5,46.2 L 102.2,48.4 L 100,54.5 L 97.8,48.4 L 91.5,46.2 L 97.8,44 Z" />
+
+    <!-- STEM 1: Left Vertical Pillar (H) -->
+    <path class="dark-serif" d="M 52,56 C 56,56 59,57 60,60 L 61,62 L 67,62 L 68,60 C 69,57 72,56 76,56 L 76,53 L 52,53 Z" />
+    <rect class="dark-stem" x="61" y="60" width="6.5" height="74" />
+    <path class="dark-serif" d="M 52,138 L 52,141 L 76,141 L 76,138 C 72,138 69,137 68,134 L 67,132 L 61,132 L 60,134 C 59,137 56,138 52,138 Z" />
+
+    <!-- HORIZONTAL CROSSBAR (H) -->
+    <rect class="dark-stem" x="67.5" y="94.5" width="29" height="4.5" />
+
+    <!-- STEM 2: Shared Center Pillar (H & N) -->
+    <path class="dark-serif" d="M 88,56 C 92,56 95,57 96,60 L 96.5,62 L 103.5,62 L 104,60 C 105,57 108,56 112,56 L 112,53 L 88,53 Z" />
+    <rect class="dark-stem" x="96.5" y="60" width="7" height="74" />
+    <path class="dark-serif" d="M 88,138 L 88,141 L 112,141 L 112,138 C 108,138 105,137 104,134 L 103.5,132 L 96.5,132 L 96,134 C 95,137 92,138 88,138 Z" />
+
+    <!-- DIAGONAL TRAVERSE (N) -->
+    <polygon class="dark-stem" points="98,59 108,59 139,134 130,134" />
+    <line x1="102" y1="62" x2="135" y2="132" stroke="#DCC8AC" stroke-width="0.8" opacity="0.8" />
+
+    <!-- STEM 3: Right Vertical Pillar (N) -->
+    <path class="dark-serif" d="M 125,56 C 128,56 131,57 132,60 L 133,62 L 139,62 L 140,60 C 141,57 144,56 148,56 L 148,53 L 125,53 Z" />
+    <rect class="dark-stem" x="133" y="60" width="6" height="74" />
+    <path class="dark-serif" d="M 125,138 L 125,141 L 148,141 L 148,138 C 144,138 141,137 140,134 L 139,132 L 133,132 L 132,134 C 131,137 128,138 125,138 Z" />
+  </g>
+
+  <!-- Bottom Archival Descriptor -->
+  <text class="dark-sub" x="100" y="166">HAS NAA</text>
+  <line x1="82" y1="172" x2="118" y2="172" stroke="#DCC8AC" stroke-width="0.75" />
+</svg>

@@ -1,0 +1,267 @@
+/**
+ * HAS NAA — WOMEN'S FASHION
+ * Design System Tokens & Custom Properties
+ * Philosophy: Quiet Luxury | Understated Feminine Elegance
+ * -------------------------------------------------------------
+ */
+
+:root {
+  /* ==========================================================
+   * 1. CORE BRAND COLOR PALETTE
+   * ========================================================== */
+  --hn-color-ivory: #F5F0E8;           /* Primary Canvas & Background */
+  --hn-color-ivory-light: #FAF7F2;     /* Subtle Off-White Tint */
+  --hn-color-ivory-dark: #EAE3D5;      /* Warm Parchment Shadow */
+
+  --hn-color-champagne: #DCC8AC;       /* Champagne Beige / Subtle Gold Accent */
+  --hn-color-champagne-light: #E8DAC4; /* Luminous Champagne Highlight */
+  --hn-color-champagne-dark: #CBB290;  /* Aged Champagne Metallic */
+
+  --hn-color-taupe: #A68B70;           /* Warm Taupe / Structural Mid-tone */
+  --hn-color-taupe-light: #BEA78F;     /* Soft Muted Sand */
+  --hn-color-taupe-dark: #8C7359;      /* Deep Earth Taupe */
+
+  --hn-color-mocha: #6B5140;           /* Mocha Brown / Artisanal Leather Accent */
+  --hn-color-mocha-light: #836754;     /* Roasted Hazelnut */
+  --hn-color-mocha-dark: #523D2E;      /* Dark Espresso Roast */
+
+  --hn-color-charcoal: #292522;        /* Primary Charcoal Typography & Structure */
+  --hn-color-charcoal-light: #3D3834;  /* Softened Charcoal */
+  --hn-color-charcoal-dark: #1A1816;   /* Deepest Obsidian Velvet */
+
+  --hn-color-pure-white: #FFFFFF;
+  --hn-color-pure-black: #000000;
+
+  /* ==========================================================
+   * 2. SEMANTIC COLOR TOKENS (LIGHT THEME / DEFAULT)
+   * ========================================================== */
+  --hn-bg-canvas: var(--hn-color-ivory);
+  --hn-bg-surface: var(--hn-color-ivory-light);
+  --hn-bg-surface-elevated: #FFFFFF;
+  --hn-bg-surface-subtle: #EFE9DE;
+  --hn-bg-overlay: rgba(41, 37, 34, 0.45);
+  --hn-bg-scrim: rgba(245, 240, 232, 0.88);
+
+  --hn-text-primary: var(--hn-color-charcoal);
+  --hn-text-secondary: var(--hn-color-mocha);
+  --hn-text-muted: var(--hn-color-taupe);
+  --hn-text-accent: var(--hn-color-mocha-dark);
+  --hn-text-on-dark: var(--hn-color-ivory);
+  --hn-text-on-accent: var(--hn-color-charcoal);
+
+  --hn-border-hairline: rgba(166, 139, 112, 0.22);
+  --hn-border-subtle: rgba(220, 200, 172, 0.55);
+  --hn-border-medium: var(--hn-color-champagne);
+  --hn-border-strong: var(--hn-color-taupe);
+  --hn-border-focus: var(--hn-color-charcoal);
+
+  --hn-accent-gold: var(--hn-color-champagne);
+  --hn-accent-hover: var(--hn-color-champagne-dark);
+
+  /* Status / Feedback (Luxury Muted Tones) */
+  --hn-status-success: #60735E;        /* Sage / Laurel Muted Green */
+  --hn-status-warning: #B3864C;        /* Amber Ochre */
+  --hn-status-error: #9E4743;          /* Rosewood Terra Cotta */
+  --hn-status-info: #586B7E;           /* Slate Blue */
+
+  /* ==========================================================
+   * 3. TYPOGRAPHY SYSTEM
+   * ========================================================== */
+  /* Font Families */
+  --hn-font-editorial: 'Cormorant Garamond', 'Bodoni MT', 'Didot', 'Playfair Display', Georgia, serif;
+  --hn-font-sans: 'Montserrat', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --hn-font-arabic-display: 'Alexandria', 'Amiri', 'Traditional Arabic', serif;
+  --hn-font-arabic-body: 'Alexandria', 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+
+  /* Font Weights */
+  --hn-weight-light: 300;
+  --hn-weight-regular: 400;
+  --hn-weight-medium: 500;
+  --hn-weight-semibold: 600;
+  --hn-weight-bold: 700;
+
+  /* Typographic Scales (Desktop Base) */
+  --hn-text-display-1: clamp(2.75rem, 5vw, 4.5rem);   /* 44px - 72px Hero Editorial */
+  --hn-text-display-2: clamp(2.25rem, 4vw, 3.5rem);   /* 36px - 56px Page Title */
+  --hn-text-h1: clamp(1.85rem, 3vw, 2.75rem);         /* 30px - 44px Editorial Header */
+  --hn-text-h2: clamp(1.5rem, 2.4vw, 2.15rem);        /* 24px - 34px Section Title */
+  --hn-text-h3: clamp(1.25rem, 1.8vw, 1.65rem);       /* 20px - 26px Collection Name */
+  --hn-text-h4: 1.25rem;                               /* 20px Subsection */
+  --hn-text-h5: 1.05rem;                               /* 17px Minor Headline */
+  --hn-text-h6: 0.925rem;                              /* 15px Component Header */
+
+  --hn-text-body-lg: 1.125rem;                         /* 18px Editorial Lead */
+  --hn-text-body: 0.975rem;                            /* 15.6px Standard Body */
+  --hn-text-body-sm: 0.85rem;                          /* 13.6px Product Details */
+  --hn-text-caption: 0.75rem;                          /* 12px Micro-copy & Metadata */
+  --hn-text-overline: 0.70rem;                         /* 11px Tracked Kicker / Category */
+
+  /* Line Heights */
+  --hn-leading-none: 1.0;
+  --hn-leading-tight: 1.15;
+  --hn-leading-heading: 1.25;
+  --hn-leading-snug: 1.4;
+  --hn-leading-body: 1.65;                             /* Generous luxury line-height */
+  --hn-leading-loose: 1.85;
+
+  /* Letter Spacing (Tracking) */
+  --hn-tracking-tighter: -0.02em;
+  --hn-tracking-normal: 0em;
+  --hn-tracking-wide: 0.08em;
+  --hn-tracking-wider: 0.18em;
+  --hn-tracking-widest: 0.28em;                        /* Luxury Brand Headings */
+  --hn-tracking-ultra: 0.45em;                         /* Uppercase Descriptors & Badges */
+
+  /* ==========================================================
+   * 4. SPACING & GRID SYSTEM (8pt Modular Scale)
+   * ========================================================== */
+  --hn-space-2xs: 0.25rem;   /* 4px */
+  --hn-space-xs: 0.5rem;     /* 8px */
+  --hn-space-sm: 0.75rem;    /* 12px */
+  --hn-space-md: 1rem;       /* 16px */
+  --hn-space-lg: 1.5rem;     /* 24px */
+  --hn-space-xl: 2rem;       /* 32px */
+  --hn-space-2xl: 3rem;      /* 48px */
+  --hn-space-3xl: 4.5rem;    /* 72px */
+  --hn-space-4xl: 6rem;      /* 96px */
+  --hn-space-5xl: 8rem;      /* 128px */
+
+  /* Container Widths */
+  --hn-container-max: 1360px;
+  --hn-container-narrow: 920px;
+  --hn-container-gutter: clamp(1.25rem, 4vw, 3.5rem);
+
+  /* ==========================================================
+   * 5. BORDERS & RADII
+   * ========================================================== */
+  --hn-radius-none: 0px;       /* Sharp Architectural Luxury */
+  --hn-radius-subtle: 2px;     /* Subtle Softening */
+  --hn-radius-sm: 4px;         /* Product Cards & Dropdowns */
+  --hn-radius-md: 8px;         /* Modals */
+  --hn-radius-full: 9999px;    /* Circular Badges & Pills */
+
+  --hn-border-width-hairline: 0.75px;
+  --hn-border-width-thin: 1px;
+  --hn-border-width-thick: 2px;
+
+  /* ==========================================================
+   * 6. SHADOWS & ELEVATION (Warm Ambient Occlusion)
+   * ========================================================== */
+  --hn-shadow-subtle: 0 2px 8px -2px rgba(41, 37, 34, 0.04), 0 1px 3px 0 rgba(166, 139, 112, 0.06);
+  --hn-shadow-card: 0 4px 18px -4px rgba(41, 37, 34, 0.06), 0 2px 6px -1px rgba(166, 139, 112, 0.05);
+  --hn-shadow-elevated: 0 12px 32px -8px rgba(41, 37, 34, 0.09), 0 4px 12px -2px rgba(166, 139, 112, 0.07);
+  --hn-shadow-flyout: 0 20px 48px -12px rgba(41, 37, 34, 0.14), 0 8px 20px -4px rgba(41, 37, 34, 0.06);
+
+  /* ==========================================================
+   * 7. TRANSITIONS & TIMING
+   * ========================================================== */
+  --hn-ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);     /* Smooth Editorial Deceleration */
+  --hn-ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --hn-duration-fast: 180ms;
+  --hn-duration-normal: 320ms;
+  --hn-duration-slow: 540ms;
+  --hn-duration-editorial: 850ms;
+
+  /* ==========================================================
+   * 8. COMPONENT DESIGN TOKENS
+   * ========================================================== */
+  /* Buttons */
+  --hn-btn-height: 48px;
+  --hn-btn-height-sm: 38px;
+  --hn-btn-padding-x: 28px;
+  --hn-btn-font-family: var(--hn-font-sans);
+  --hn-btn-font-size: 0.78rem;
+  --hn-btn-letter-spacing: var(--hn-tracking-ultra);
+  --hn-btn-text-transform: uppercase;
+  --hn-btn-font-weight: var(--hn-weight-medium);
+
+  /* Primary Button */
+  --hn-btn-primary-bg: var(--hn-color-charcoal);
+  --hn-btn-primary-text: var(--hn-color-ivory);
+  --hn-btn-primary-border: var(--hn-color-charcoal);
+  --hn-btn-primary-hover-bg: var(--hn-color-mocha-dark);
+  --hn-btn-primary-hover-border: var(--hn-color-mocha-dark);
+
+  /* Secondary / Ghost Button */
+  --hn-btn-secondary-bg: transparent;
+  --hn-btn-secondary-text: var(--hn-color-charcoal);
+  --hn-btn-secondary-border: var(--hn-color-charcoal);
+  --hn-btn-secondary-hover-bg: var(--hn-color-charcoal);
+  --hn-btn-secondary-hover-text: var(--hn-color-ivory);
+
+  /* Navigation Bar */
+  --hn-nav-height: 80px;
+  --hn-nav-height-scrolled: 64px;
+  --hn-nav-bg: rgba(245, 240, 232, 0.94);
+  --hn-nav-backdrop-filter: blur(14px);
+  --hn-nav-border-bottom: var(--hn-border-hairline);
+  --hn-nav-link-color: var(--hn-color-charcoal);
+  --hn-nav-link-spacing: var(--hn-tracking-wider);
+
+  /* Product Card */
+  --hn-card-aspect-ratio: 3 / 4;                      /* High-Fashion Portrait Ratio */
+  --hn-card-bg: var(--hn-color-ivory-light);
+  --hn-card-border: var(--hn-border-subtle);
+  --hn-card-radius: var(--hn-radius-subtle);
+  --hn-card-padding: 0.75rem;
+  --hn-card-hover-scale: 1.025;
+}
+
+/* ==========================================================
+ * 9. DARK LUXURY THEME TOKENS
+ * ========================================================== */
+[data-theme="dark"],
+.theme-dark {
+  --hn-bg-canvas: #1E1B19;                            /* Warm Obsidian Canvas */
+  --hn-bg-surface: var(--hn-color-charcoal);           /* Rich Charcoal Surface */
+  --hn-bg-surface-elevated: #332F2B;
+  --hn-bg-surface-subtle: #24201E;
+  --hn-bg-overlay: rgba(10, 9, 8, 0.75);
+  --hn-bg-scrim: rgba(30, 27, 25, 0.90);
+
+  --hn-text-primary: var(--hn-color-ivory);
+  --hn-text-secondary: var(--hn-color-champagne);
+  --hn-text-muted: var(--hn-color-taupe-light);
+  --hn-text-accent: var(--hn-color-champagne-light);
+
+  --hn-border-hairline: rgba(220, 200, 172, 0.16);
+  --hn-border-subtle: rgba(220, 200, 172, 0.28);
+  --hn-border-medium: rgba(220, 200, 172, 0.45);
+  --hn-border-strong: var(--hn-color-champagne);
+  --hn-border-focus: var(--hn-color-champagne-light);
+
+  --hn-shadow-subtle: 0 2px 8px -2px rgba(0, 0, 0, 0.45);
+  --hn-shadow-card: 0 4px 18px -4px rgba(0, 0, 0, 0.55);
+  --hn-shadow-elevated: 0 12px 32px -8px rgba(0, 0, 0, 0.70);
+
+  /* Dark Theme Buttons */
+  --hn-btn-primary-bg: var(--hn-color-champagne);
+  --hn-btn-primary-text: var(--hn-color-charcoal);
+  --hn-btn-primary-border: var(--hn-color-champagne);
+  --hn-btn-primary-hover-bg: var(--hn-color-champagne-light);
+  --hn-btn-primary-hover-border: var(--hn-color-champagne-light);
+
+  --hn-btn-secondary-bg: transparent;
+  --hn-btn-secondary-text: var(--hn-color-ivory);
+  --hn-btn-secondary-border: var(--hn-color-champagne);
+  --hn-btn-secondary-hover-bg: var(--hn-color-champagne);
+  --hn-btn-secondary-hover-text: var(--hn-color-charcoal);
+
+  /* Dark Theme Navigation */
+  --hn-nav-bg: rgba(30, 27, 25, 0.92);
+  --hn-nav-link-color: var(--hn-color-ivory);
+}
+
+/* ==========================================================
+ * 10. RTL (ARABIC) TYPOGRAPHIC & LAYOUT ADAPTATION
+ * ========================================================== */
+[dir="rtl"],
+html[lang="ar"] {
+  --hn-font-editorial: var(--hn-font-arabic-display);
+  --hn-font-sans: var(--hn-font-arabic-body);
+  --hn-leading-body: 1.8;                              /* Arabic requires extended vertical line box */
+  --hn-tracking-widest: 0.04em;                        /* Arabic letter-spacing must remain restrained */
+  --hn-tracking-ultra: 0.08em;                         /* Avoid disjointing Arabic cursive glyphs */
+  --hn-btn-letter-spacing: 0.06em;
+  --hn-btn-text-transform: none;
+}

@@ -1,0 +1,286 @@
+/**
+ * HAS NAA | WOMEN'S FASHION
+ * Responsive & RTL Stylesheet
+ * Handles Mobile Breakpoints (375px - 1024px) & Full Arabic RTL Mirroring
+ */
+
+/* ==========================================================
+ * 1. ARABIC (RTL) TYPOGRAPHIC & LAYOUT OVERRIDES
+ * ========================================================== */
+[dir="rtl"], html[lang="ar"] {
+  font-family: var(--hn-font-arabic-body), -apple-system, BlinkMacSystemFont, Tahoma, sans-serif;
+  line-height: 1.8;
+}
+
+[dir="rtl"] h1, 
+[dir="rtl"] h2, 
+[dir="rtl"] h3, 
+[dir="rtl"] .hn-editorial-title {
+  font-family: var(--hn-font-arabic-display), 'Traditional Arabic', serif;
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
+
+[dir="rtl"] .hn-kicker,
+[dir="rtl"] .hn-btn,
+[dir="rtl"] .hn-nav-item,
+[dir="rtl"] .hn-concierge-pill {
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+[dir="rtl"] .hn-link-arrow::after {
+  transform-origin: right;
+}
+
+[dir="rtl"] .hn-footer-links a:hover {
+  padding-inline-start: 4px;
+}
+
+/* ==========================================================
+ * 2. MOBILE NAVIGATION DRAWER
+ * ========================================================== */
+.hn-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  background-color: var(--hn-color-ivory);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: var(--hn-space-xl);
+  transform: translateX(-100%);
+  transition: transform var(--hn-duration-normal) var(--hn-ease-luxury);
+  overflow-y: auto;
+}
+
+[dir="rtl"] .hn-mobile-drawer {
+  transform: translateX(100%);
+}
+
+.hn-mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.hn-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--hn-space-3xl);
+  padding-bottom: var(--hn-space-md);
+  border-bottom: 1px solid var(--hn-border-subtle);
+}
+
+.hn-drawer-close {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--hn-color-charcoal);
+}
+
+.hn-drawer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hn-space-lg);
+  margin-bottom: var(--hn-space-3xl);
+}
+
+.hn-drawer-link {
+  font-family: var(--hn-font-editorial);
+  font-size: 1.85rem;
+  color: var(--hn-color-charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hn-drawer-link span.num {
+  font-family: var(--hn-font-sans);
+  font-size: 0.72rem;
+  letter-spacing: var(--hn-tracking-ultra);
+  color: var(--hn-color-taupe);
+}
+
+.hn-drawer-footer {
+  margin-top: auto;
+  padding-top: var(--hn-space-xl);
+  border-top: 1px solid var(--hn-border-subtle);
+}
+
+/* ==========================================================
+ * 3. TABLET LANDSCAPE & DESKTOP SMALL (max-width: 1024px)
+ * ========================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --hn-nav-height: 70px;
+  }
+
+  .hn-catalog-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--hn-space-lg);
+  }
+
+  .hn-product-layout {
+    grid-template-columns: 1fr;
+    gap: var(--hn-space-2xl);
+  }
+
+  .hn-product-info {
+    position: static;
+  }
+
+  .hn-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--hn-space-2xl);
+  }
+
+  .hn-footer-brand {
+    grid-column: span 2;
+  }
+
+  .hn-contact-layout {
+    grid-template-columns: 1fr;
+    gap: var(--hn-space-2xl);
+  }
+}
+
+/* ==========================================================
+ * 4. TABLET PORTRAIT (max-width: 768px)
+ * ========================================================== */
+@media (max-width: 768px) {
+  .hn-nav-links {
+    display: none;
+  }
+
+  .hn-mobile-toggle {
+    display: flex;
+  }
+
+  .hn-concierge-pill span {
+    display: none;
+  }
+
+  .hn-concierge-pill {
+    padding: 6px;
+  }
+
+  .hn-hero {
+    min-height: 75vh;
+  }
+
+  .hn-hero-title {
+    font-size: 2.25rem;
+    letter-spacing: 0.08em;
+  }
+
+  .hn-catalog-grid,
+  .hn-catalog-grid.editorial-view {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--hn-space-md);
+  }
+
+  .hn-services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--hn-space-md);
+  }
+
+  .hn-footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--hn-space-xl);
+  }
+
+  .hn-footer-brand {
+    grid-column: span 1;
+  }
+
+  .hn-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hn-filter-tabs {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hn-filter-actions {
+    justify-content: space-between;
+  }
+}
+
+/* ==========================================================
+ * 5. MOBILE PHONES (max-width: 480px)
+ * ========================================================== */
+@media (max-width: 480px) {
+  :root {
+    --hn-nav-height: 60px;
+    --hn-container-gutter: 1rem;
+  }
+
+  .hn-announcement {
+    height: auto;
+    padding-block: 6px;
+    font-size: 0.65rem;
+  }
+
+  .hn-brand-logo img {
+    height: 32px;
+  }
+
+  .hn-hero {
+    min-height: 80vh;
+  }
+
+  .hn-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hn-hero-subtitle {
+    font-size: 0.90rem;
+  }
+
+  .hn-catalog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--hn-space-lg);
+  }
+
+  .hn-gallery-thumbs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Sticky Mobile WhatsApp Inquiry Bar on Product Details */
+  .hn-mobile-sticky-inquiry {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--hn-color-ivory);
+    border-top: 1px solid var(--hn-border-subtle);
+    padding: 10px var(--hn-space-md);
+    z-index: 90;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .hn-mobile-sticky-inquiry .hn-btn-whatsapp {
+    height: 48px;
+    font-size: 0.76rem;
+  }
+
+  .hn-product-salon {
+    padding-bottom: 100px; /* Space for sticky bar */
+  }
+
+  .hn-btn {
+    width: 100%;
+  }
+
+  .hn-hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+}
